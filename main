@@ -4,6 +4,108 @@
 --getgenv().UseWatermark = true
 --getgenv().AutoExec = true
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Seperqtor = Instance.new("TextLabel")
+local check = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local getkey = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+Frame.BorderColor3 = Color3.fromRGB(0, 17, 255)
+Frame.BorderSizePixel = 5
+Frame.Position = UDim2.new(0.358518511, 0, 0.373064995, 0)
+Frame.Size = UDim2.new(0, 401, 0, 178)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.248868778, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "J2OBV V1 | INSERT KEY"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Seperqtor.Name = "Seperqtor"
+Seperqtor.Parent = Frame
+Seperqtor.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Seperqtor.BackgroundTransparency = 1.000
+Seperqtor.Position = UDim2.new(0.126696825, 0, 0, 0)
+Seperqtor.Size = UDim2.new(0, 308, 0, 83)
+Seperqtor.Font = Enum.Font.SourceSans
+Seperqtor.Text = "----------------------------------------"
+Seperqtor.TextColor3 = Color3.fromRGB(255, 255, 255)
+Seperqtor.TextSize = 14.000
+
+check.Name = "check"
+check.Parent = Frame
+check.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+check.Position = UDim2.new(0.291770577, 0, 0.662921309, 0)
+check.Size = UDim2.new(0, 161, 0, 26)
+check.Font = Enum.Font.SourceSans
+check.Text = "SUBMIT"
+check.TextColor3 = Color3.fromRGB(255, 255, 255)
+check.TextScaled = true
+check.TextSize = 14.000
+check.TextWrapped = true
+check.MouseButton1Click:Connect(function()
+	if TextBox.Text == "dsknmvs374110223-OBV" then
+		Frame.Visible = false
+		wait(0.5)
+	end
+end)
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.Position = UDim2.new(0.244389027, 0, 0.320224732, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "KEY HERE"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner.Parent = TextBox
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(17, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Parent = Frame
+
+getkey.Name = "getkey"
+getkey.Parent = Frame
+getkey.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+getkey.Position = UDim2.new(0.815461338, 0, 0.146067411, 0)
+getkey.Size = UDim2.new(0, 66, 0, 125)
+getkey.Font = Enum.Font.SourceSans
+getkey.Text = "GET KEY"
+getkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+getkey.TextScaled = true
+getkey.TextSize = 14.000
+getkey.TextWrapped = true
+getkey.MouseButton1Click:Connect(function()
+	game.StarterGui:SetCore("SendNotification", {Title = "Copied!", Text = "Link Successfully copied!", Icon = "", Duration = 4})
+	wait(1)
+	setclipboard("https://direct-link.net/610054/j2obv-v1-key")
+end)
+
 repeat task.wait() until game:IsLoaded();
 for x, v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
 	v:Disable()
@@ -22,8 +124,8 @@ local NotifyLib=loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhon
 local api=loadstring(game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/aimhook/api/corefile.lua"))()
 local beams = game:GetObjects("rbxassetid://12328085159")[1]
 local xonae = false or false;
-local name=""..math.random(1,100000000) -- fuck you nigger
-local name2=""..math.random(1,100000000) -- fuck you nigger
+local name=""..math.random(1,100000000) -- fuck you 
+local name2=""..math.random(1,100000000) -- fuck you 
 BodyVelocity.MaxForce = Vector3.new(math.huge, 0, math.huge)
 NoAnimation.AnimationId = "rbxassetid://0"
 SecureFolder.Name="AimhookSecureFolder"

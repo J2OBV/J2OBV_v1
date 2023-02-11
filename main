@@ -204,10 +204,6 @@ local __config = { -- custom sleeves, very nice tbh.
     Texture = "rbxassetid://11627980878"
 }
 
-if identifyexecutor() ~= "Synapse X" then 
-    
-	   
-end
 
 if isfile('welcome.txt')then
     while true do end    
